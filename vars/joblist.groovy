@@ -6,7 +6,7 @@ def call(String name = 'human') {
         stages {
             stage ('set go path') {
                 steps {
-                    script{
+                    script {
                         Utils utils = new Utils();
                         utils.jobList();
                     }
