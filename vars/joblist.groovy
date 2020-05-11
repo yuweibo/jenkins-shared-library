@@ -6,10 +6,11 @@ def call(String name = 'human') {
         stages {
             stage ('set go path') {
                 steps {
-                    script {
-                        Utils utils = new Utils();
-                        utils.jobList();
-                    }
+                    echo "sssss---"
+//                    script {
+//                        Utils utils = new Utils();
+//                        utils.jobList();
+//                    }
                 }
             }
         }
