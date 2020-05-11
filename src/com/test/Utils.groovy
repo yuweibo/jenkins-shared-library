@@ -1,11 +1,13 @@
 package com.test
 
+@Grab('com.cdancy:jenkins-rest:0.0.25')
 import com.cdancy.jenkins.rest.JenkinsClient
 import com.cdancy.jenkins.rest.domain.job.Job
 import com.cdancy.jenkins.rest.domain.system.SystemInfo
 
 // 实现 Serializable 接口是为了确保当 pipeline 被 Jenkins挂起后能正确恢复
 class Utils implements Serializable {
+
    def createVersion(String BUILD_NUMBER) {
        return new Date().format('yyyyMM') + "-${BUILD_NUMBER}"
    }
